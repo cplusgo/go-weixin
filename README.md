@@ -1,2 +1,0 @@
-# go-weixin
-go-weixin
