@@ -48,11 +48,11 @@ const (
 	APP_KEY           = ""
 	MCH_ID            = ""
 	wxUnifiedorderURL = "https://api.mch.weixin.qq.com/pay/unifiedorder"
+	TRADE_TYPE = "APP"
 )
 
 func NewWxPaymentSigned(nonceStr string, body string,
-	desc string, fee int, notifyUrl string, outTradeNo string, createIp string,
-	tradeType string, attach string) *WxPaymentSigned {
+	desc string, fee int, notifyUrl string, outTradeNo string, createIp string, attach string) *WxPaymentSigned {
 	payment := &WxPaymentSigned{
 		appId:      APP_ID,
 		appKey:     APP_KEY,
@@ -64,7 +64,7 @@ func NewWxPaymentSigned(nonceStr string, body string,
 		notifyUrl:  notifyUrl,
 		outTradeNo: outTradeNo,
 		createIp:   createIp,
-		tradeType:  tradeType,
+		tradeType:  TRADE_TYPE,
 		attach:     attach,
 	}
 	return payment
